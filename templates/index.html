@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="#">
+        <title> Sign Up </title>
+    <!--
+    TODO: add reference external style.css file
+    -->
+        <link rel="stylesheet"  href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <!--
+    TODO: create html components to capture user input
+    TODO: make sure to set required inputs
+    TODO: add styling from style.css to submit button
+    --> 
+    <body>
+		<form method="POST" action="/sign_up">
+            <!-- <h1>Username</h1>
+            <input name="username">
+            <h2>Email</h2>
+            <input name="email">
+            <h2>Password</h2>
+            <input name="password">
+            <input type="submit"> -->
+            User-name: <input type = "text" name = "username" /><br>
+            Email:     <input type = "text" name = "email" />
+            <br>
+            Password:  <input type = "password" name = "password" />
+            <br>
+            <input type = "submit" name = "submit" value = "Submit" />
+        </form>
+    <!--
+    TODO: add alert_welcome function from external utils.js file
+    TODO: call alert_welcome
+    -->
+        <script src="{{ url_for('static',filename='js/utils.js') }}">   alert_welcome()   </script>
+	</body>
+</html>
